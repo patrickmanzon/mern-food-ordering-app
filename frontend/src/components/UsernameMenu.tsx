@@ -8,7 +8,7 @@ import { Button } from './ui/button'
 
 export default function UsernameMenu() {
     const {user, logout} = useAuth0()
-
+    
     return (
         <DropdownMenu>
             <DropdownMenuTrigger className='flex items-center px-3 font-bold hover:text-orange-500 gap-2'>
@@ -16,6 +16,11 @@ export default function UsernameMenu() {
                 {user?.email}
             </DropdownMenuTrigger>
             <DropdownMenuContent>
+                <DropdownMenuItem>
+                    <Link to="/manage-restaurant" className='fong-bold hover:text-orange-500'>
+                        Manage Restaurant
+                    </Link>
+                </DropdownMenuItem>
                 <DropdownMenuItem>
                     <Link to="/user-profile" className='fong-bold hover:text-orange-500'>
                         User Profile
