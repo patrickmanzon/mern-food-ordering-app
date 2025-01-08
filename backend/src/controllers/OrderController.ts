@@ -1,10 +1,12 @@
 import { Request, Response } from "express";
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_API_SECRET as string);
-const frontendUrl = process.env.FRONTEND_URL as string;
+const STRIPE = new Stripe(process.env.STRIPE_API_SECRET as string);
+const FRONTEND_URL = process.env.FRONTEND_URL as string;
 
-
+type CheckoutSessionRequest = {
+    
+}
 
 
 const createCheckoutSession = (req: Request, res: Response) => {
