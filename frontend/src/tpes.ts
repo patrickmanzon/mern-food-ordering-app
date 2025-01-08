@@ -7,11 +7,13 @@ export type User = {
 }
 
 export type MenuItem = {
+    _id: string;
     name: string;
     price: number
 }
 
 export type Restaurant = {
+    _id: number;
     user: string;
     restaurantName: string;
     city: string;
@@ -22,4 +24,13 @@ export type Restaurant = {
     menuItems: MenuItem[]
     imageUrl: string
     lastUpdated: string
+}
+
+export type ApiResponse<Data> = {
+    data: Data[],
+    pagination: {
+        page: number
+        pages: number
+        total: number
+    }
 }

@@ -66,7 +66,7 @@ export const useCreateUser = () => {
         }
     }
 
-    const { mutateAsync: createUser, isLoading, isError, isSuccess } = useMutation(createUserRequest);
+    const { mutate: createUser, isLoading, isError, isSuccess } = useMutation(createUserRequest);
 
     return {
         createUser,
@@ -106,7 +106,7 @@ export const useUpdateUser = () => {
     }
 
     const { 
-        mutateAsync: updateUser, 
+        mutate: updateUser, 
         isLoading, 
         isSuccess, 
         reset,

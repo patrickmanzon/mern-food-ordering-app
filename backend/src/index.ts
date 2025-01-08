@@ -4,6 +4,7 @@ import "dotenv/config"
 import mongoose from "mongoose";
 import UserRoute from "./routes/UserRoutes"
 import MyRestaurantRoute from "./routes/MyRestaurantRoutes"
+import SearchRestaurantRoute from "./routes/RestaurantRoutes"
 import {v2 as cloudinary} from "cloudinary"
 
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string)
@@ -21,6 +22,7 @@ app.use(cors());
 
 app.use("/api/my/user", UserRoute);
 app.use("/api/my/restaurant", MyRestaurantRoute);
+app.use("/api/restaurant", SearchRestaurantRoute);
 
 app.listen(5000, () => {
     console.log("listening!!");
