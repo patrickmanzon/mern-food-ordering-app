@@ -24,6 +24,6 @@ app.use("/api/my/user", UserRoute);
 app.use("/api/my/restaurant", MyRestaurantRoute);
 app.use("/api/restaurant", SearchRestaurantRoute);
 
-app.listen(5000, () => {
+app.listen(3000, () => {
     console.log("listening!!");
 });
